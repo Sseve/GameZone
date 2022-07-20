@@ -1,0 +1,9 @@
+---
+# 开服
+
+- name: open zone
+  hosts: 
+    - opennode
+  gather_facts: no
+  roles:
+    - open

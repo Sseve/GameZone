@@ -1,0 +1,8 @@
+---
+# 更新区服的程序和配置文件
+
+- name: update zone
+  hosts: 
+    - allnode
+  roles:
+    - update

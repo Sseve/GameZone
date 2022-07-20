@@ -1,0 +1,16 @@
+---
+# 区服: start,stop,check,reload
+
+- name: find game directory
+  find:
+    paths: "{{game_directory}}"
+    file_type: directory
+    use_regex: True
+    patterns: 
+      - "{{zone_repx}}"
+  register: zonedir
+- name: "zone {{operate}}"
+  shell:
+    chdir: "{{item.path}}"
+    cmd: "sh game_opt.sh {{operate}}"
+  with_items: "{{zonedir.files}}"

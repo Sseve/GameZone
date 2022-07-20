@@ -1,0 +1,7 @@
+---
+# 本文件中的配置针对于operate role
+
+
+# 区服相关的配置
+game_directory: /data/game/
+zone_repx: test_syf_*

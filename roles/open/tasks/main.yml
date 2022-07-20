@@ -1,0 +1,20 @@
+---
+
+- name: create game directory
+  file:
+    path: "{{game_directory}}{{zone_name}}_{{zone}}"
+    state: directory
+- name: get bin file
+  copy:
+    src: "{{bin_file}}"
+    dest: "{{game_directory}}{{zone_name}}_{{zone}}"
+    mode: 755
+- name: get config file
+  subversion:
+    repo: "{{svn_url}}"
+    username: "{{svn_user}}"
+    password: "{{svn_pass}}"
+    dest: "{{game_directory}}{{zone_name}}_{{zone}}"
+    export: yes
+    in_place: yes
+    force: yes

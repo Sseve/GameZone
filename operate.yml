@@ -1,0 +1,8 @@
+---
+# 区服: start, stop, check, reload
+
+- name: operate zone
+  hosts: 
+    - allnode
+  roles:
+    - operate

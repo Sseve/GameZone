@@ -1,0 +1,18 @@
+# 新节点按照如下格式进行编写
+[node0]
+127.0.0.1
+[node1]
+172.16.9.128
+[node2]
+172.16.9.129
+
+
+# 开服选择节点
+[opennode:children]
+node2
+
+
+# 区服操作,更新选择节点
+[allnode:children]
+node1
+node2
