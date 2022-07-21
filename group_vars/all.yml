@@ -3,7 +3,7 @@
 
 # 区服相关的配置
 game_directory: /data/game/
-bin_file: /data/ansibledemo/bin/gameserv
+bin_file: /data/GameZone/bin/gameserv
 zone_name: test_syf
 zone_repx: test_syf_*
 
