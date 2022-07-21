@@ -9,7 +9,7 @@
 
 # 开服选择节点
 [opennode:children]
-node2
+node1
 
 
 # 区服操作,更新选择节点

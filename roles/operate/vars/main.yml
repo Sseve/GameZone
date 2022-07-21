@@ -3,5 +3,5 @@
 
 
 # 区服相关的配置
-game_directory: /data/game/
-zone_repx: test_syf_*
+# game_directory: /data/game/
+# zone_repx: test_syf_*

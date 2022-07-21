@@ -2,13 +2,13 @@
 # 本文件里的配置针对于update role
 
 
-# 区服相关的配置
-game_directory: /data/game/
-zone_repx: "test_syf_*"
-bin_file: /data/gamezone/bin/gameserv
+# # 区服相关的配置
+# game_directory: /data/game/
+# zone_repx: "test_syf_*"
+# bin_file: /data/gamezone/bin/gameserv
 
 
-# svn相关的配置
-svn_url: http://127.0.0.1:80/test/xxx
-svn_user: username
-svn_pass: password
+# # svn相关的配置
+# svn_url: http://127.0.0.1:80/test/xxx
+# svn_user: username
+# svn_pass: password
