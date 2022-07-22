@@ -1,0 +1,11 @@
+# 格式如下:
+
+[node1]
+test_syf 1
+test_syf 2
+test_syf 3
+
+[node2]
+test_syf 4
+test_syf 5
+test_syf 6
