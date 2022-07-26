@@ -1,20 +1,25 @@
 ---
 
-- name: create game directory
+- name: "create game directory" 
   file:
-    path: "{{game_directory}}{{zone_name}}_{{zone}}"
+    path: "{{game_directory}}{{zone_name}}_{{item}}"
     state: directory
-- name: get bin file
+  with_items: "{{zone_num}}"
+
+- name: "get bin file"
   copy:
     src: "{{bin_file}}"
-    dest: "{{game_directory}}{{zone_name}}_{{zone}}"
-    mode: 755
+    dest: "{{game_directory}}{{zone_name}}_{{item}}"
+    mode: 0755
+  with_items: "{{zone_num}}"
+
 - name: get config file
   subversion:
     repo: "{{svn_url}}"
     username: "{{svn_user}}"
     password: "{{svn_pass}}"
-    dest: "{{game_directory}}{{zone_name}}_{{zone}}"
+    dest: "{{game_directory}}{{zone_name}}_{{item}}"
     export: yes
     in_place: yes
     force: yes
+  with_items: "{{zone_num}}"

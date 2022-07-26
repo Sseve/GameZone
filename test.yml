@@ -1,0 +1,8 @@
+---
+# test play
+
+- name: test play
+  hosts:
+    - node1
+  roles:
+    - test

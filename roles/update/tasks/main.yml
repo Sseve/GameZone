@@ -5,15 +5,18 @@
     file_type: directory
     use_regex: yes
     patterns: 
-      - "{{zone_repx}}"
+      - "{{zone_name}}_*"
   register: zones
-- name: update bin
+
+- name: "update binfile"
   copy: 
     src: "{{bin_file}}"
     dest: "{{item.path}}" 
     mode: 755
   with_items: "{{zones.files}}"
-- name: update config
+  when: "(item.path.split('_')[2]|int) in zone_num and opt == 'bin'"
+
+- name: "update config"
   subversion: 
     repo: "{{svn_url}}"
     username: "{{svn_user}}"
@@ -22,3 +25,4 @@
     export: yes
     force: yes
   with_items: "{{zones.files}}"
+  when: "(item.path.split('_')[2]|int) in zone_num and opt == 'con'"

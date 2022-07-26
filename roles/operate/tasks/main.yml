@@ -7,10 +7,12 @@
     file_type: directory
     use_regex: True
     patterns: 
-      - "{{zone_repx}}"
+      - "{{zone_name}}_*"
   register: zonedir
-- name: "zone {{operate}}"
-  shell:
-    chdir: "{{item.path}}"
-    cmd: "sh game_opt.sh {{operate}}"
+
+- name: "zone {{act}}"
+  shell: |
+    cd {{item.path}}
+    sh game_opt.sh {{act}}
   with_items: "{{zonedir.files}}"
+  when: "(item.path.split('_')[2]|int) in zone_num"

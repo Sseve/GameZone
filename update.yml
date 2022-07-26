@@ -4,5 +4,6 @@
 - name: update zone
   hosts: 
     - allnode
+  gather_facts: no
   roles:
     - update
