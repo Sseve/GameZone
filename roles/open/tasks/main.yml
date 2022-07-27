@@ -10,7 +10,7 @@
   copy:
     src: "{{bin_file}}"
     dest: "{{game_directory}}{{zone_name}}_{{item}}"
-    mode: 0755
+    mode: '0755'
   with_items: "{{zone_num}}"
 
 - name: get config file

@@ -3,6 +3,6 @@
 
 - name: test play
   hosts:
-    - node1
+    - allnode
   roles:
     - test

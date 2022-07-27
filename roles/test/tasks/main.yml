@@ -1,5 +1,1 @@
 ---
-
-- name: test role
-  debug:
-    msg: "{{ zones }}"

@@ -6,8 +6,7 @@
     paths: "{{game_directory}}"
     file_type: directory
     use_regex: True
-    patterns: 
-      - "{{zone_name}}_*"
+    patterns: "{{zone_name}}_*"
   register: zonedir
 
 - name: "zone {{act}}"
