@@ -35,7 +35,7 @@
     ansible-playbook update.yml --extra-vars '{"zone_name": "test_syf", "zone_num": [1,2], "opt":"con"}'
     zone_name: 区服名称, zone_num: 区服id列表, opt: [bin|con] => [更新binfile|更新配置]
 
-  - 区服操作: start, stop, check, reload; operate对应的值
+  - 区服操作: start, stop, check, reload
     ansible-playbook operate.yml --extra-vars '{"zone_name": "test_syf", "zone_num": [1,6], "act": "start"}'
     zone_name: 区服名称, zone_num: 区服id列表, act: [start|stop|check|reload] => [启动|关闭|检查|重载]
 ```
