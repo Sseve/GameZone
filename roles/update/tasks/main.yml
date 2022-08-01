@@ -35,3 +35,14 @@
   with_items: "{{zones.files}}"
   when: "(item.path.split('_')[2]|int) in zone_num and opt == 'con'"
   register: svn_ret
+
+- name: check md5
+  md5:
+    path: "{{game_directory}}{{zone_name}}_{{item}}"
+  with_items: "{{zone_num}}"
+  register: md5_result
+
+- name: get md5 result
+  debug:
+    msg: "{{item.msg}}"
+  with_items: "{{md5_result.results}}"
